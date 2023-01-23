@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Palindrome Checker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script> function palindrome() {
+            var inputstr = document.getElementById("input").value;
+            var reg = /[w_]/g;
+            var lcase = inputstr.toLowerCase().replace(reg, "");
+            var reversed = lcase.split("").reverse().join("");
+        
+            if(reversed === lcase){
+                document.getElementById("result").innerHTML = 
+                    "Given String is a Palindrome";
+            }
+            else{
+                document.getElementById("result").innerHTML = 
+                    "Given String is not a Palindrome";
+            }
+        }</script>
+        <title> day 7</title>
+    </head>
+    <body>
+        <h1>WELCOME!</h1>
+        <BR></BR>
+        <h2 id="heading">Type a word and find out whether it is a Palindrome or not</h2>
+
+        <section>
+            <form><input type="text" placeholder="Enter a word" name="input" id="input" autocomplete="off">
+            </form>
+
+            <button Onclick="palindrome()">Submit</button>
+            <p id="result"></p>
+        </section>
+
+
+        
+        
+    </body>
+</html>
